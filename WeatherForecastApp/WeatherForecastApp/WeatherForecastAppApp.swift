@@ -7,24 +7,11 @@
 
 import SwiftUI
 
-
-//
-////@main
-//struct WeatherApp: App {
-//    var body: some Scene {
-//        WindowGroup {
-//            ContentView1()
-//        }
-//    }
-//}
-
-
-
 @main
 struct WeatherForecastAppApp: App {
     var body: some Scene {
         WindowGroup {
-
+            
             WeatherScreen(currentWeather: WeatherCoordModel.fake)
         }
         

@@ -19,17 +19,17 @@ class DateHelper {
         return dateFormatter.string(from: date)
     }
     
-   static func getHourAndAMPMFromDateStr(_ dateString: String) -> (hour: Int, ampm: String)? {
+    static func getHourAndAMPMFromDateStr(_ dateString: String) -> (hour: Int, ampm: String)? {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss" // adjust the format according to your date string
-
+        
         if let date = dateFormatter.date(from: dateString) {
             let calendar = Calendar.current
             let hour = calendar.component(.hour, from: date)
             let ampm = calendar.component(.hour, from: date) < 12 ? "AM" : "PM"
             return (hour, ampm)
         }
-
+        
         return nil // Return nil if the date string couldn't be converted to a Date object
     }
     

@@ -91,7 +91,7 @@ extension WeatherCoordModel {
         //  let WeatherCoordModel = WeatherCoordModel(WeatherCoordModel(
         let mockWeatherCoordData = WeatherCoordModel(
             cod : "",
-           message : 0,
+            message : 0,
             cnt : 40,
             list : [List(dt : 0,
                          main : Main(
@@ -108,7 +108,7 @@ extension WeatherCoordModel {
                          weather : [Weather(id: 0, main: "a", description: "a", icon: "a")],
                          clouds : Clouds(all: 1),
                          wind : Wind(speed: 10.0, deg: 1, gust: 10.0),
-                          visibility : 1,
+                         visibility : 1,
                          pop : 1.0,
                          sys : Sys(pod: "abc"),
                          dt_txt : "txt")],
@@ -116,5 +116,5 @@ extension WeatherCoordModel {
         )
         return mockWeatherCoordData
     }
-        
-    }
+    
+}

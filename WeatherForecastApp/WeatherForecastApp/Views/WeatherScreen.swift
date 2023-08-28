@@ -28,7 +28,7 @@ struct WeatherScreen: View {
                         Divider()
                         
                         DailyForecastView(weather: viewModel.weatherDayModel)
-                                            
+                        
                         Button(action: {
                             viewModel.fetchWeatherDataVM()
                         }, label: {
@@ -53,12 +53,8 @@ struct WeatherScreen: View {
     }
 }
 
-
-
 struct WeatherScreen_Previews: PreviewProvider {
     static var previews: some View {
-        
-       // vm.WeatherModel.fake
         WeatherScreen(currentWeather: WeatherCoordModel.fake)
     }
 }

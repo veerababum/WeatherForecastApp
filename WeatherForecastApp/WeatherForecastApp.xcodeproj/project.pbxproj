@@ -95,13 +95,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		09B60DFB2A9C67C900B48362 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
 		09B60DFC2A9C67FE00B48362 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,7 +131,6 @@
 				09ED45922A9B24AC00002ABB /* Models */,
 				09ED45982A9B265300002ABB /* ViewModel */,
 				09ED45952A9B25C400002ABB /* Services */,
-				09B60DFB2A9C67C900B48362 /* Utilities */,
 				09B60DFC2A9C67FE00B48362 /* Helpers */,
 				09ED45682A9B132A00002ABB /* Assets.xcassets */,
 				09ED456A2A9B132A00002ABB /* Preview Content */,

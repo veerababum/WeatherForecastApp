@@ -24,7 +24,7 @@ struct DailyForecastView: View {
             HStack {
                 Text(day)
                     .frame(width: 150, alignment: .leading)
-               // Spacer()
+                // Spacer()
                 AsyncImage(url: imgUrl) { image in
                     image.resizable()
                 } placeholder: {
@@ -46,19 +46,3 @@ struct DailyForecastView_Previews: PreviewProvider {
         DailyForecastView()
     }
 }
-
-//                HStack {
-//                    Text(day)
-//                        .frame(width: 120, alignment: .leading)
-//                    AsyncImage(url: imgUrl) { image in
-//                        image.resizable()
-//                    } placeholder: {
-//                        ProgressView().progressViewStyle(.circular)
-//                    }
-//                    .scaledToFit()
-//                    .frame(width: 50, height: 50)
-//                    Text("\(lowTemp)° - \(highTemp)°")
-//                        .font(.subheadline)
-//                        .padding(.leading, 10)
-//                }
-//.padding(.vertical, 5)
