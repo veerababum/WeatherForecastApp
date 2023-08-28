@@ -8,7 +8,7 @@
 import Foundation
 
 class Network {
-    // "https://api.openweathermap.org/data/2.5/forecast?id=524901&appid=49b4f4f80b7a69e2cff0fd5ba62f0ec1"
+
     static let shared = Network()
     
     private init() {}

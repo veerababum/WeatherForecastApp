@@ -11,25 +11,29 @@ struct CurrentWeatherView: View {
     var weather: WeatherCoordModel?
     var body: some View {
         VStack {
-            // Weather Icon
-            AsyncImage(url: URL(string: NetworkConstant.imageUrl + "\(weather?.list?.first?.weather?.first?.icon ?? "")@2x.png")) { image in
-                image.resizable()
-            } placeholder: {
-                ProgressView().progressViewStyle(.circular)
-            }
-            .scaledToFit()
-            .frame(width: 60, height: 60)
+            Spacer()
             // CityName
             Text(weather?.city?.name ?? "")
                 .font(.title)
                 .padding(.top, -10)
-            // Current temperature
-            Text(String(format: "%.2f", weather?.list?.first?.main?.temp ?? 0.0))
+            // Current temperature   
+            Text(String(format: "%.2f", weather?.list?.first?.main?.temp ?? 0.0)  + "°")
                 .font(.system(size: 60))
                 .fontWeight(.thin)
-            // Current weather condition
-            Text(weather?.list?.first?.weather?.first?.main ?? "")
-                .font(.title)
+            HStack {
+                // Weather Icon
+                AsyncImage(url: URL(string: NetworkConstant.imageUrl + "\(weather?.list?.first?.weather?.first?.icon ?? "")@2x.png")) { image in
+                    image.resizable()
+                } placeholder: {
+                    ProgressView().progressViewStyle(.circular)
+                }
+                .scaledToFit()
+                .frame(width: 60, height: 60)
+                // Current weather condition
+                Text(weather?.list?.first?.weather?.first?.main ?? "")
+                    .font(.title)
+            }
+            
             // High and Low for the day temp_min
             HStack {
                 Text("H:" + String(format: "%.2f", weather?.list?.first?.main?.temp_max ?? 0.0))
@@ -37,7 +41,10 @@ struct CurrentWeatherView: View {
                 Text("L:" + String(format: "%.2f", weather?.list?.first?.main?.temp_min ?? 0.0))
                     .font(.subheadline)
             }
-            .padding(.top, 10)
+            Spacer()
+            Spacer()
+            
+            //.padding(.top, 10)
             // Hourly forecast
             HStack(spacing: 20) {
                 
@@ -57,8 +64,9 @@ struct CurrentWeatherView: View {
                     }
                 }
             }
-            .padding(.top, 40)
+            .padding(.bottom, 20)
             Spacer()
         }
+        .padding(.top, 50)
     }
 }

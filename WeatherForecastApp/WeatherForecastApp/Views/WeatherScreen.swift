@@ -24,7 +24,6 @@ struct WeatherScreen: View {
                     } else {
                         Spacer()
                         CurrentWeatherView(weather: viewModel.weatherModel)
-                        
                         Divider()
                         
                         DailyForecastView(weather: viewModel.weatherDayModel)
