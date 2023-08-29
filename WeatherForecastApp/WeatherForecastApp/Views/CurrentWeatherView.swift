@@ -11,15 +11,16 @@ struct CurrentWeatherView: View {
     var weather: WeatherCoordModel?
     var body: some View {
         VStack {
-            Spacer()
             // CityName
-            Text(weather?.city?.name ?? "")
-                .font(.title)
-                .padding(.top, -10)
-            // Current temperature   
-            Text(String(format: "%.2f", weather?.list?.first?.main?.temp ?? 0.0)  + "°")
-                .font(.system(size: 60))
-                .fontWeight(.thin)
+            VStack {
+                Text(weather?.city?.name ?? "")
+                    .font(.title)
+                // Current temperature
+                Text(String(format: "%.2f", weather?.list?.first?.main?.temp ?? 0.0)  + "°")
+                    .font(.system(size: 60))
+                    .fontWeight(.thin)
+            }
+            .padding(-20)
             HStack {
                 // Weather Icon
                 AsyncImage(url: URL(string: NetworkConstant.imageUrl + "\(weather?.list?.first?.weather?.first?.icon ?? "")@2x.png")) { image in
@@ -33,7 +34,6 @@ struct CurrentWeatherView: View {
                 Text(weather?.list?.first?.weather?.first?.main ?? "")
                     .font(.title)
             }
-            
             // High and Low for the day temp_min
             HStack {
                 Text("H:" + String(format: "%.2f", weather?.list?.first?.main?.temp_max ?? 0.0))
@@ -41,12 +41,9 @@ struct CurrentWeatherView: View {
                 Text("L:" + String(format: "%.2f", weather?.list?.first?.main?.temp_min ?? 0.0))
                     .font(.subheadline)
             }
-            Spacer()
-            Spacer()
+            .padding(.bottom)
             
-            //.padding(.top, 10)
-            // Hourly forecast
-            HStack(spacing: 20) {
+            HStack(spacing: 35) {
                 
                 ForEach((weather?.list ?? []), id: \.dt_txt) {list  in
                     VStack {
@@ -60,13 +57,15 @@ struct CurrentWeatherView: View {
                         .frame(width: 30, height: 30)
                         
                         Text("\(Int(list.main?.temp ?? 0))°C")
-                        
                     }
                 }
             }
-            .padding(.bottom, 20)
-            Spacer()
         }
-        .padding(.top, 50)
+    }
+}
+
+struct CurrentWeatherView_Previews: PreviewProvider {
+    static var previews: some View {
+        CurrentWeatherView()
     }
 }

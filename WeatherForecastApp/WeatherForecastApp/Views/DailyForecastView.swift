@@ -13,11 +13,14 @@ struct DailyForecastView: View {
     
     // var forecast: DailyForecast
     var body: some View {
-        //Spacer()
-        VStack (alignment: .leading){
+        VStack (){
             // Title for the HStack
-            Text("5-DAYS FORECAST")
-                .font(.subheadline)
+            HStack {
+                Text("5-DAYS FORECAST")
+                    .font(.subheadline)
+                Spacer()  
+            }
+            .padding()
             // 5-Day Forecast
             ForEach(0..<(weather?.list?.count ?? 0), id: \.self) { index in
                 let weatherData = weather?.list?[index]
@@ -40,10 +43,8 @@ struct DailyForecastView: View {
                         .font(.subheadline)
                         .padding(.leading, 10)
                 }
-                .padding(.vertical, 10)
             }
         }
-        .padding(.top, 20)
     }
 }
 

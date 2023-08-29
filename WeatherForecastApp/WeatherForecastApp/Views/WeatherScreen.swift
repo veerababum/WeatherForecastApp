@@ -18,11 +18,10 @@ struct WeatherScreen: View {
                 LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.000009), Color.blue]),
                                startPoint: .top, endPoint: .bottom)
                 .edgesIgnoringSafeArea(.all)
-                VStack(spacing: -10) {
+                VStack() {
                     if viewModel.state == .loading {
                         ProgressView()
                     } else {
-                        Spacer()
                         CurrentWeatherView(weather: viewModel.weatherModel)
                         Divider()
                         
@@ -36,10 +35,8 @@ struct WeatherScreen: View {
                                 .scaledToFit()
                                 .frame(width: 30, height: 30)
                         })
-                        .padding(.bottom, 20)
                     }
                 }
-                .padding(.leading, 5)
                 .onAppear {
                     viewModel.fetchWeatherDataVM()
                 }

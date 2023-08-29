@@ -11,7 +11,6 @@ import SwiftUI
 struct WeatherForecastAppApp: App {
     var body: some Scene {
         WindowGroup {
-            
             WeatherScreen(currentWeather: WeatherCoordModel.fake)
         }
         
