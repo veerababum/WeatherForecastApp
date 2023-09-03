@@ -7,6 +7,17 @@ A simple yet elegant weather forecast application built with SwiftUI.
 
 The app fetches and displays weather data from a REST API, presenting it in an interactive and user-friendly interface.
 
+
+## Technologies
+🧵 async/await
+
+🔁 REST APIs
+
+🏛️ MVVM
+
+✅ XCTest
+
+
 ### Features:
 
 1. **UI Design:**
