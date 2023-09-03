@@ -7,13 +7,15 @@
 
 import SwiftUI
 
-struct WeatherScreen: View {
+ struct WeatherScreen: View {
+    
     @State var currentWeather: WeatherCoordModel
     @StateObject var viewModel = WeatherViewModel()
     @State private var searchText = ""
     var body: some View {
         NavigationView {
             ZStack {
+
                 // Gradient background
                 LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.000009), Color.blue]),
                                startPoint: .top, endPoint: .bottom)

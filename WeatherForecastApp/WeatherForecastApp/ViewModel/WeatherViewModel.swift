@@ -25,7 +25,7 @@ class WeatherViewModel: ObservableObject {
         let endpoint = "\(baseURL)?q=\(searchCity)&cnt=48&appid=\(apiKey)&units=metric"
         Task {
             do {
-                let model: WeatherCoordModel = try await Network.shared.fetchData(from: endpoint)
+                let model: WeatherCoordModel = try await NetworkManager.shared.fetchData(from: endpoint)
                 DispatchQueue.main.async {
                     self.filterDataDayWise(weatherData: model)
                 }

@@ -7,35 +7,31 @@
 
 import Foundation
 
-class Network {
+class NetworkManager {
 
-    static let shared = Network()
-    
+    static let shared = NetworkManager()
+    let decoder         = JSONDecoder()
+
     private init() {}
     
     func fetchData<T: Codable>(from endpoint: String) async throws -> T {
         guard let url = URL(string: endpoint) else {
-            throw networkError.InvalidURL
+            throw WeatherError.invalidUrl
         }
         
         let (data, response) = try await URLSession.shared.data(from: url)
         
         guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
-            throw networkError.InvalidRes
+            throw WeatherError.invalidResponse
+
         }
         do {
-            let decoderData = try JSONDecoder().decode(T.self, from: data)
+            let decoderData = try decoder.decode(T.self, from: data)
             
             return decoderData
         } catch {
             print(error)
-            throw networkError.InvalidData
+            throw WeatherError.invalidData
         }
     }
-}
-
-enum networkError: Error {
-    case InvalidURL
-    case InvalidRes
-    case InvalidData
 }

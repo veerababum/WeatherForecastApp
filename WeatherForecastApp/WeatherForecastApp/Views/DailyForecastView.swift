@@ -18,7 +18,7 @@ struct DailyForecastView: View {
             HStack {
                 Text("5-DAYS FORECAST")
                     .font(.subheadline)
-                Spacer()  
+                Spacer()
             }
             .padding()
             // 5-Day Forecast
