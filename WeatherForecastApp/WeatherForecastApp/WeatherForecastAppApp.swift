@@ -11,7 +11,8 @@ import SwiftUI
 struct WeatherForecastAppApp: App {
     var body: some Scene {
         WindowGroup {
-            WeatherScreen(currentWeather: WeatherCoordModel.fake)
+            SplashScreenView()
+           // WeatherScreen(currentWeather: WeatherCoordModel.fake)
         }
         
     }

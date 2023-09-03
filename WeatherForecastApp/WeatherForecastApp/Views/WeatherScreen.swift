@@ -15,7 +15,6 @@ import SwiftUI
     var body: some View {
         NavigationView {
             ZStack {
-
                 // Gradient background
                 LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.000009), Color.blue]),
                                startPoint: .top, endPoint: .bottom)
@@ -47,6 +46,7 @@ import SwiftUI
             .onSubmit(of: .search) {
                 viewModel.fetchWeatherDataVM(searchCity: searchText)
             }
+            .navigationTitle("Weather forecast")
         }
     }
 }

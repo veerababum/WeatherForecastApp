@@ -11,6 +11,7 @@ struct CurrentWeatherView: View {
     var weather: WeatherCoordModel?
     var body: some View {
         VStack {
+            Spacer()
             // CityName
             VStack {
                 Text(weather?.city?.name ?? "")
@@ -61,6 +62,7 @@ struct CurrentWeatherView: View {
                 }
             }
         }
+        .padding(.top, 50)
     }
 }
 

@@ -9,7 +9,7 @@ import Foundation
 
 class NetworkManager {
 
-    static let shared = NetworkManager()
+    static let shared   = NetworkManager()
     let decoder         = JSONDecoder()
 
     private init() {}
