@@ -62,3 +62,6 @@ class WeatherViewModel: ObservableObject {
         state = .loaded
     }
 }
+class PlayData {
+    var allWords = ["String", "dgdgdg"]
+}

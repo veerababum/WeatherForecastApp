@@ -7,8 +7,6 @@
 
 import Foundation
 
-import Foundation
-
 enum WeatherError: String, Error {
     
     case invalidUrl         = "This Invalid URL."
@@ -16,6 +14,8 @@ enum WeatherError: String, Error {
     case invalidResponse    = "Invalid response from the server. Please try again."
     case invalidData        = "The data received from the server was invalid. Please try again."
     case unableToFavorite   = "There was an error favoriting this user. Please try again."
+   // case invalidResponseStatus400    = "Invalid response from the server. Please try again."
+
 }
 
 //enum networkError: Error {

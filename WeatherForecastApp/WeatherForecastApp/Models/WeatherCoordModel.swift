@@ -88,7 +88,6 @@ struct Wind: Codable {
 
 extension WeatherCoordModel {
     static var fake: WeatherCoordModel {
-        //  let WeatherCoordModel = WeatherCoordModel(WeatherCoordModel(
         let mockWeatherCoordData = WeatherCoordModel(
             cod : "",
             message : 0,
@@ -116,5 +115,4 @@ extension WeatherCoordModel {
         )
         return mockWeatherCoordData
     }
-    
 }

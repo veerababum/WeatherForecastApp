@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		095FCEF92AA90CF100D6E286 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ED45992A9B266F00002ABB /* WeatherViewModel.swift */; };
 		097A24E12AA25A36000C5572 /* LanchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097A24E02AA25A36000C5572 /* LanchScreen.swift */; };
 		097A24E32AA5196B000C5572 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 097A24E22AA5196B000C5572 /* Assets.xcassets */; };
 		098A114B2A9BBF74009FFB81 /* WeatherCoordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098A114A2A9BBF74009FFB81 /* WeatherCoordModel.swift */; };
@@ -355,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09ED45762A9B132B00002ABB /* WeatherForecastAppTests.swift in Sources */,
+				095FCEF92AA90CF100D6E286 /* WeatherViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
