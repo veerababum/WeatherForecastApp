@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		095FCEF92AA90CF100D6E286 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ED45992A9B266F00002ABB /* WeatherViewModel.swift */; };
+		09713C922AC5DA920055A195 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 09713C912AC5DA920055A195 /* README.md */; };
+		09713C942AC5DABF0055A195 /* PreparationPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09713C932AC5DABF0055A195 /* PreparationPlan.swift */; };
 		097A24E12AA25A36000C5572 /* LanchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097A24E02AA25A36000C5572 /* LanchScreen.swift */; };
 		097A24E32AA5196B000C5572 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 097A24E22AA5196B000C5572 /* Assets.xcassets */; };
 		098A114B2A9BBF74009FFB81 /* WeatherCoordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098A114A2A9BBF74009FFB81 /* WeatherCoordModel.swift */; };
@@ -45,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09713C912AC5DA920055A195 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
+		09713C932AC5DABF0055A195 /* PreparationPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreparationPlan.swift; sourceTree = "<group>"; };
 		097A24E02AA25A36000C5572 /* LanchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanchScreen.swift; sourceTree = "<group>"; };
 		097A24E22AA5196B000C5572 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		098A114A2A9BBF74009FFB81 /* WeatherCoordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCoordModel.swift; sourceTree = "<group>"; };
@@ -143,6 +147,8 @@
 		09ED45632A9B132800002ABB /* WeatherForecastApp */ = {
 			isa = PBXGroup;
 			children = (
+				09713C912AC5DA920055A195 /* README.md */,
+				09713C932AC5DABF0055A195 /* PreparationPlan.swift */,
 				09ED45642A9B132800002ABB /* WeatherForecastAppApp.swift */,
 				097A24E02AA25A36000C5572 /* LanchScreen.swift */,
 				09B60DFA2A9C676500B48362 /* Views */,
@@ -310,6 +316,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09713C922AC5DA920055A195 /* README.md in Resources */,
 				097A24E32AA5196B000C5572 /* Assets.xcassets in Resources */,
 				09ED456C2A9B132A00002ABB /* Preview Assets.xcassets in Resources */,
 			);
@@ -346,6 +353,7 @@
 				09ED45912A9B182E00002ABB /* WeatherScreen.swift in Sources */,
 				09C0BFFD2AA11C3900F8F94A /* AlertVC.swift in Sources */,
 				AC21796B2A9D258E009C8FA0 /* DateHelper.swift in Sources */,
+				09713C942AC5DABF0055A195 /* PreparationPlan.swift in Sources */,
 				09ED45652A9B132800002ABB /* WeatherForecastAppApp.swift in Sources */,
 				AC501C7B2A9BDC4700EB166E /* NetworkConstant.swift in Sources */,
 			);
